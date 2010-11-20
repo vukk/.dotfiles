@@ -11,9 +11,9 @@ INSTALLING
 ==========
 
 - Clone git repository to the path you want your dotfiles to
-  eg. git clone http://foobar ~/.dotfiles
+  eg. `git clone https://vukk@github.com/vukk/.dotfiles.git ~/.dotfiles`
 - Configure DOTFILES & APPDATA directory paths in the file "start"
-- Run ''./install.sh'' or see what it does and do it manually
+- Run `./install.sh` or see what it does and do it manually
 
 APPDATA
 =======
@@ -40,26 +40,25 @@ $DOTFILES/local/, otherwise use ~/.localrc
 LAYOUT
 ======
 
-<code>
-./.gitignore	- stuff that git ignores
-./aliases		- contains alises
-./config		- main configuration file that runs other files, start sources
-				this
-./envs			- environment variables go here
-./functions		- additional shell functions/subroutines/procedures
-./inputrc		- inputrc
-./paths			- path configuration (eg. for PATH and MANPATH envs)
-./readme.md		- this file
-./start			- start file, contains DOTFILES & APPDATA envs, sources ./config
-./tmp			- file for temporary configuration that git should ignore
-./temp			- same as ./tmp
+	./.gitignore	- stuff that git ignores
+	./aliases		- contains alises
+	./config		- main configuration file that runs other files, start
+					sources this
+	./envs			- environment variables go here
+	./functions		- additional shell functions/subroutines/procedures
+	./inputrc		- inputrc
+	./paths			- path configuration (eg. for PATH and MANPATH envs)
+	./readme.md		- this file
+	./start			- start file, contains DOTFILES & APPDATA envs, sources
+					./config
+	./tmp			- file for temporary configuration that git should ignore
+	./temp			- same as ./tmp
 
-shells/*		- shell RCs
-shells/home/*	- shell RCs that are softlinked to $HOME by install
+	shells/*		- shell RCs
+	shells/home/*	- shell RCs that are softlinked to $HOME by install
 
-local/`hostname --fqdn`	- local configuration for the specific server
-$HOME/.localrc			- local configuration for the specific server
-</code>
+	local/`hostname --fqdn`	- local configuration for the specific server
+	$HOME/.localrc			- local configuration for the specific server
 
 TODO (a.k.a not going to happen)
 ================================
