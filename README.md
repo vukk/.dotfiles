@@ -11,7 +11,7 @@ INSTALLING
 ==========
 
 - Clone git repository to the path you want your dotfiles to
-  eg. `git clone https://vukk@github.com/vukk/.dotfiles.git ~/.dotfiles`
+  eg. `git clone https://github.com/vukk/.dotfiles.git ~/.dotfiles`
 - Configure DOTFILES & APPDATA directory paths in the file "start"
 - Run `./install.sh` or see what it does and do it manually
 
