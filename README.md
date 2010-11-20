@@ -13,7 +13,7 @@ INSTALLING
 - Clone git repository to the path you want your dotfiles to
   eg. git clone http://foobar ~/.dotfiles
 - Configure DOTFILES & APPDATA directory paths in the file "start"
-- Run './install.sh' or see what it does and do it manually
+- Run ''./install.sh'' or see what it does and do it manually
 
 APPDATA
 =======
@@ -23,8 +23,8 @@ cluttering your $HOME directory. This means that you need to configure programs
 to read/write files from/to this directory.
 
 eg. I have Erlang reading VM arguments from $APPDATA/erlang/vm.args
-    I've done this by setting ERL_AFLAGS to "-args_file $APPDATA/erlang/vm.args"
-	in $DOTFILES/envs
+I've done this by setting ERL_AFLAGS to "-args_file $APPDATA/erlang/vm.args"
+in $DOTFILES/envs
 
 PER MACHINE CONFIGURATION
 =========================
@@ -40,6 +40,7 @@ $DOTFILES/local/, otherwise use ~/.localrc
 LAYOUT
 ======
 
+<code>
 ./.gitignore	- stuff that git ignores
 ./aliases		- contains alises
 ./config		- main configuration file that runs other files, start sources
@@ -58,6 +59,7 @@ shells/home/*	- shell RCs that are softlinked to $HOME by install
 
 local/`hostname --fqdn`	- local configuration for the specific server
 $HOME/.localrc			- local configuration for the specific server
+</code>
 
 TODO (a.k.a not going to happen)
 ================================
@@ -69,4 +71,3 @@ TODO (a.k.a not going to happen)
   and application configuration could be in git, but not all of it should be in
   git eg. Erlang secret cookies.
 * Move screenrc, nanorc etc. under appdata
-
