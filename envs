@@ -1,0 +1,20 @@
+# EDITOR
+export EDITOR='nano -w'
+
+# PAGER
+if test -n "$(command -v less)" ; then
+    PAGER="less -FirSwX"
+    MANPAGER="less -FiRswX"
+else
+    PAGER=more
+    MANPAGER="$PAGER"
+fi
+export PAGER MANPAGER
+
+# MAILCHECK
+#unset MAILCHECK
+#export MAILCHECK=60
+
+## Erlang
+export ERL_LIBS=$HOME/elib
+export ERL_AFLAGS="-args_file $APPDATA/erlang/vm.args"

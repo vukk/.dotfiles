@@ -1,0 +1,7 @@
+# If not running interactively, don't do anything:
+[ -z "$PS1" ] && return
+
+# Configure system from ~/.dotfiles
+source ~/.dotfiles/start
+
+test -f ~/.localrc && source ~/.localrc

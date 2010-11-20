@@ -1,0 +1,10 @@
+# add private bin if it exists
+test -d ~/bin && export PATH=~/bin:"${PATH}"
+
+# add existing bin dirs under ~/opt to PATH
+DIRS=$PATH
+for d in ~/opt/*/bin
+do
+  DIRS="$d:$DIRS"
+done
+export PATH=$DIRS

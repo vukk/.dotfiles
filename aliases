@@ -1,0 +1,15 @@
+# cd
+alias cd..='cd ..'
+alias d='cd ..'
+
+# list
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias l='ls -la'
+alias l.='ls -d .*'
+
+# wget
+alias wget='wget --no-check-certificate'
+
+# weechat
+alias weechat='weechat-curses'

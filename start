@@ -1,0 +1,12 @@
+# DOTFILES START
+# This is where .bashrc etc. should point to, eg.
+# ---
+# source ~/.dotfiles/start
+# ---
+
+# dotfiles directory
+export DOTFILES=~/.dotfiles
+# appdata directory
+export APPDATA=~/.appdata
+
+source $DOTFILES/config

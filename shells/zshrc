@@ -1,0 +1,44 @@
+# TITLE
+precmd () {
+	case $TERM in
+		screen)
+			print -Pn "\e]0;%n@%m: %~\a"
+			print -Pn "\ekzsh: %~\e\\"
+			;;
+		xterm*|rxvt)
+			print -Pn "\e]0;%n@%m: %~\a"
+			;;
+	esac
+}
+preexec () {
+	case $TERM in
+		screen)
+			print -Pn "\e]0;%n@%m: $1\a"
+			print -Pn "\ek$1\e\\"
+			;;
+		xterm*|rxvt)
+			print -Pn "\e]0;%n@%m: $1\a"
+			;;
+	esac
+}
+
+################################################################################
+
+# HISTORY
+HISTFILE=$APPDATA/history/zsh
+HISTSIZE=10000
+SAVEHIST=5000
+setopt appendhistory extendedglob nonomatch notify
+unsetopt beep
+bindkey -e
+
+# COMPINSTALL
+zstyle :compinstall filename "$DOTFILES/shells/zshrc"
+autoload -Uz compinit
+compinit
+
+# PROMPT
+autoload -U promptinit
+promptinit
+# select prompt theme
+prompt adam2 green cyan yellow none

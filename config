@@ -1,0 +1,38 @@
+# DOTFILES CONFIG
+
+# UMASK
+umask 0022
+
+# EXECUTE SHELL SPECIFIC CONFIGS
+TMPSHELL=`basename $SHELL`
+test -f $DOTFILES/shells/${TMPSHELL}rc && source $DOTFILES/shells/${TMPSHELL}rc
+
+# COLORS
+if [ "$TERM" != "dumb" ]; then
+    eval "`dircolors -b`"
+fi
+
+# INPUTRC
+test -f $DOTFILES/inputrc && export INPUTRC=$DOTFILES/inputrc
+
+# ENVS
+test -f $DOTFILES/envs && source $DOTFILES/envs
+
+# FUNCTIONS
+test -f $DOTFILES/functions && source $DOTFILES/functions
+
+# ALIASES
+test -f $DOTFILES/aliases && source $DOTFILES/aliases
+
+# PATHS
+test -f $DOTFILES/paths && source $DOTFILES/paths
+
+# HOST SPECIFIC CONFIG
+HOSTCONF=$DOTFILES/local/`hostname --fqdn`
+test -f $HOSTCONF && source $HOSTCONF
+
+# TEMP
+test -f $DOTFILES/temp && source $DOTFILES/temp
+test -f $DOTFILES/tmp && source $DOTFILES/tmp
+
+################################################################################

@@ -1,0 +1,27 @@
+# HISTORY
+export HISTFILE="$APPDATA/history/bash"
+# don't put duplicate lines in the history
+#export HISTCONTROL=ignoredups
+# dont put anything duplicate in the history
+export HISTCONTROL=ignoreboth
+
+# PROMPT
+PS1='\u@\h:\w\$ '
+
+# MISC
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# TITLE
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+	xterm*|rxvt*)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+		;;
+	*)
+		;;
+esac
+
+# BASH COMPLETION
+test -f /etc/bash_completion && source /etc/bash_completion
