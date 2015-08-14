@@ -1,6 +1,17 @@
 NOTE
 ====
 
+
+THESE ARE OLD AND CRUFTY AND THERE IS NO REASON TO COPY FROM THEM.
+MAKE YOURSELF A FAVOR AND START USING VCSH <https://github.com/RichiH/vcsh>.
+It's a bit complicated, but the only proper solution for dotfile management that I'm aware of.
+
+
+
+
+OLD STUFF BELOW
+===============
+
 These are MY dotfiles, so you might want to remove some stuff you do not use.
 And add your own stuff, obviously.
 
